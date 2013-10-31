@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="HTyoLippumestari.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="description" content="Kuvaus roboteille" />
+    <meta name="keywords" content="Avainsanat" />
+    <meta name="author" content="Miro Holopainen" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="robots" content="ALL" />
+    <meta name="revisit-after" content=" 30 days " />
+    <link href="assets/css/base.css" rel="stylesheet" type="text/css" />
+    
+    <title>Superlippu.net</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+
+            <a href="default.aspx">
+                <div id="logoarea"></div>
+            </a>
+
+            <div id="sessions" runat="server">
+                <div id="sessionsquest" runat="server">Et ole kirjautunut sisälle.&nbsp;(<a href="login.aspx">Kirjaudu</a>) | <a href="register.aspx">Rekisteröidy</a></div>
+                <div id="sessionslogin" runat="server">
+                    <a href="usersummary.aspx">
+                        <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label></a>&nbsp;| <a href="logout.aspx">Kirjaudu ulos</a>
+                </div>
+            </div>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+         
+
+            <div id="footer">
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+SQLS:
+
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `owner`, `seatcapacity`) VALUES ('1', 'ICT-Dynamo', 'Piippukatu 2', '40100', 'Jyväskylä', 'JAMK', '300');
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `owner`, `seatcapacity`) VALUES ('2', 'Lutakon aukio', 'Piippukatu 10', '40100', 'Jyväskylä', 'Jyväskylän kaupunki / Sivistystoiminta', '1500');
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `owner`, `seatcapacity`) VALUES ('3', 'Oopperatalo', 'Mannerheimintie 10', '00100', 'Helsinki', 'Suomen oopperaseura', '5000');
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `owner`, `seatcapacity`) VALUES ('4', 'Tamperetalo', 'Tampereenkuja 668', '33000', 'Tampere', 'Tampereen kaupunki', '3000');
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `owner`, `seatcapacity`) VALUES ('5', 'Jyväskylän rotutalo', 'Keskustie 23', '40250', 'Jyväskylä', 'Suomen valtio', '500');
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `owner`, `seatcapacity`) VALUES ('6', 'Miron Palatsi', 'Rantapellonpolku 6', '40720', 'Jyväskylä', 'Miro Holopainen', '10');
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `seatcapacity`) VALUES ('7', 'Olavinlinna', 'Akselinkatu 1', '57130', 'Savonlinna', '1000');
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `owner`, `seatcapacity`) VALUES ('8', 'Jyväskylän Finnkino', 'Kauppakatu 5', '40200', 'Jyväskylä', 'Rautakirja Oy', '300');
+INSERT INTO `G2681`.`Venue` (`venueID`, `venuename`, `venueaddress`, `venuepostal`, `venuecity`, `owner`, `seatcapacity`) VALUES ('9', 'Lappia-talo', 'Hallituskatu 11', '96100', 'Rovaniemi', 'Suomen valtio', '500');
+
+
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`) VALUES ('1', '300');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('2', '1000', 'S');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('2', '250', 'Vip');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('2', '250', 'Press');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('3', '1000', 'A');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('3', '1000', 'B');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('3', '1000', 'C');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('3', '1000', 'D');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('3', '1000', 'Vip');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`seatgroupID`, `venueID`, `seatcount`) VALUES ('', '4', '2500');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('4', '500', 'Vip');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`) VALUES ('5', '500');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`) VALUES ('6', '10');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('7', '200', 'A');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('7', '200', 'B');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('7', '100', 'C');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`seatgroupID`, `venueID`, `seatcount`, `seatgroupName`) VALUES ('', '7', '50', 'Vip');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('7', '50', 'D');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('7', '400', 'E');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`) VALUES ('8', '300');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('9', '250', 'A');
+INSERT INTO `G2681`.`Venue_Seatgroup` (`venueID`, `seatcount`, `seatgroupName`) VALUES ('9', '250', 'B');
+
+
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('1', '1', 'Esa koodaa sut suohon', 'Esa Salmikangas koodaa, pysytkö mukana? Vuosien jälkeen hän on täällä taas ja opettaa miten oikeasti koodataan. Ja kovaa... Eli tule paikalle ja koodaa Esan tahdissa.', '2013-12-20 12:00:00', '12', 'perhe');
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('2', '1', 'JAMKON vuosijuhla', 'JAMKO päättää taas vuotensa. Tule juhlimaan muiden jamkolaisten kanssa! Hintaan sisältyy ruoka ja jatkolippu Escapeen.', '2014-01-15 16:00:00', '18', 'klubit');
+
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('3', '2', 'Kakaroiden leikkijuhlat', 'Suomen suosituin lastenlaulaja Cheek tulee laulamaan lapsille lutakonaukiolla. Paikalla myös leikkukalujen legendaarinen asiantuntija: Matti Meikäläinen.', '2014-02-01 10:00:00', '1', 'perhe');
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('4', '2', 'PMMP lopetuskeikka', 'Viimeinen keikka. Viimeinen hetki päästä katsomaan kuinka PMMP vaipuu tämän keikan jälkeen unholaan. Melkeen pääsee itku, mutta itku on vielä kovempi jos tämän missaat!', '2014-06-01 18:00:00', '12', 'musiikki');
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('5', '3', 'Oopperatalo tulessa', 'Nyt on niin kova meno että on hyvä jossei Oopperatalossa syttyvät liekit näy venäjälle asti! Katso ajantasainen esiintyjälista oopperatalon virallisilta sivuilta.', '2013-12-29 17:00:00', '1', 'musiikki');
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('6', '4', 'Tampere ja zombihyökkäys', 'Paasosen teatteriryhmä esittää maailmankuulun zombinäytöksensä. Esitystä on muokattu sopimaan tamperelaisten näkökulmaan zombeista ja maailmanlopusta.', '2014-02-18 18:00:00', '16', 'teatteri');
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('7', '5', 'Sinä senkin rassisti!', 'Teatteri Herra Ruotsalainen esittää ensi-illan uudesta näytöksestään: Sinä senkin rassisti! Tapahtumassa alkoholitarjonta.', '2014-01-04 20:00:00', '18', 'teatteri');
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('8', '6', 'Elitistien paremmat etkot', 'Suomen parhaat etkot ovat käsillä! Näissä juhlissa ei stippareita säästellä, paikalla on kilokuutioittain jekkua (sisältyy hintaan) ja tunnelma on parasta mitä etkoilta voi hakea.', '2014-02-02 19:00:00', '23', 'klubit');
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('9', '7', 'Olavin vaimonheiton MM-kisat', 'Maailmankuulu vaimonheitto on vihdoin suomessa. Kaikki kovat vaimonheittäjän kärkinimet voit nähdä kisailevan Olavinlinnassa. Lipun hintaan sisältyy viisi ruokailua', '2014-07-23 08:00:00', '1', 'urheilu');
+INSERT INTO `G2681`.`Events` (`eventID`, `venueID`, `eventname`, `description`, `date`, `agelimit`, `category`) VALUES ('10', '8', 'Loppuuko ideat?', 'No kyllä loppuu! Ja lore ipsum ilor ips loremum ipsuma. Ipsun loren or lirum laa lore ipsum egnum ergo ipun lorem ipsum.', '2014-01-12 12:00:00', '1', 'urheilu');
+
