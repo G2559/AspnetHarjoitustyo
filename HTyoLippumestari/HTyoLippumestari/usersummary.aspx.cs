@@ -32,6 +32,7 @@ namespace HTyoLippumestari
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
+
             txtUserid.Text = ((TextBox)FVUser.FindControl("txtUserID")).Text;
             txtUsername.Text = ((TextBox)FVUser.FindControl("txtUsername")).Text;
             txtPassword1.Text = ((TextBox)FVUser.FindControl("txtPassword")).Text;

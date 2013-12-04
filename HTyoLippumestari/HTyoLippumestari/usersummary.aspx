@@ -118,6 +118,7 @@
                 <td>
                     <asp:TextBox ID="txtUsername" runat="server" ReadOnly="True" />
                 </td>
+
             </tr>
             <tr>
                 <td>Salasana:
@@ -125,6 +126,14 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtPassword1" runat="server" TextMode="Password" />
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator1" controltovalidate="txtPassword1" errormessage="Anna salasana!" />
+
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" 
+                        ControlToValidate="txtPassword1" 
+                        ErrorMessage="4-10 kirjaiminen salasana, vähintään 1 numero ja isoja sekä pieniä kirjaimia" 
+                        ValidationExpression="^.*(?=.{4,10})(?=.*\d)(?=.*[a-zåäöA-ZÅÄÖ]).*$" />
                 </td>
             </tr>
             <tr>
@@ -134,6 +143,21 @@
                 <td>
                     <asp:TextBox ID="txtPassword2" runat="server" TextMode="Password" />
                 </td>
+                <td>
+                    <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator2" controltovalidate="txtPassword2" errormessage="Varmista salasana! " />
+
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" 
+                        ControlToValidate="txtPassword2" 
+                        ErrorMessage="" 
+                        ValidationExpression="^.*(?=.{4,10})(?=.*\d)(?=.*[a-zåäöA-ZÅÄÖ]).*$" />
+
+                    <asp:CompareValidator id="comparePasswords" 
+                      runat="server"
+                      ControlToCompare="txtPassword1"
+                      ControlToValidate="txtPassword2"
+                      ErrorMessage="Salasanat eivät ole samat!"
+                      Display="Dynamic" />
+                </td>
             </tr>
             <tr>
                 <td>Etunimi:
@@ -142,12 +166,25 @@
                 <td>
                     <asp:TextBox ID="txtFirstname" runat="server" />
                 </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+            ControlToValidate="txtFirstname" 
+            ErrorMessage="Etunimen täytyy sisältää vähintään 3 kirjainta" 
+            ValidationExpression="^[a-zA-ZåäöÅÄÖ-]{3,40}$" />
+
+                </td>
             </tr>
             <tr>
                 <td>Sukunimi:
                 </td>
                 <td>
                     <asp:TextBox ID="txtLastname" runat="server" />
+                </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
+            ControlToValidate="txtLastname" 
+            ErrorMessage="Sukunimen täytyy sisältää vähintään 3 kirjainta" 
+            ValidationExpression="^[a-zA-ZåäöÅÄÖ-]{3,40}$" />
                 </td>
             </tr>
             <tr>
@@ -156,12 +193,24 @@
                 <td>
                     <asp:TextBox ID="txtAddress" runat="server" />
                 </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" 
+                        ControlToValidate="txtAddress" 
+                        ErrorMessage="Osoitteen tulee sisältää vähintään 3 kirjainta ja vähintään yhden numeron" 
+                        ValidationExpression="^^.*(?=.{3,40})(?=.*\d)(?=.*[a-zåäöA-ZÅÄÖ]).*$" />
+                </td>
             </tr>
             <tr>
                 <td>Postinumero:
                 </td>
                 <td>
                     <asp:TextBox ID="txtPostal" runat="server" />
+                </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" 
+                        ControlToValidate="txtPostal" 
+                        ErrorMessage="Postinumeron tulee sisältää 5 numeroa" 
+                        ValidationExpression="^[0-9]{5}$" />
                 </td>
             </tr>
             <tr>
@@ -170,6 +219,12 @@
                 <td>
                     <asp:TextBox ID="txtCity" runat="server" />
                 </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" 
+                        ControlToValidate="txtCity" 
+                        ErrorMessage="Kaupunki ei voi olla tyhjä tai sisältää erikoismerkkejä" 
+                        ValidationExpression="^[a-zA-ZåäöÅÄÖ-]{2,40}$" />
+                </td>
             </tr>
             <tr>
                 <td>Puhelin:
@@ -177,12 +232,24 @@
                 <td>
                     <asp:TextBox ID="txtPuhnro" runat="server" />
                 </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" 
+                        ControlToValidate="txtPuhnro" 
+                        ErrorMessage="Puhelinnumeron tulee sisältää 6-10 numeroa" 
+                        ValidationExpression="^[0-9]{6,10}$" />
+                </td>
             </tr>
             <tr>
                 <td>Email:
                 </td>
                 <td>
                     <asp:TextBox ID="txtEmail" runat="server" />
+                </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server" 
+                        ControlToValidate="txtEmail" 
+                        ErrorMessage="Sähköpostiosoite muotoa esimerkki@sposti.com" 
+                        ValidationExpression="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$" />
                 </td>
             </tr>
         </table>

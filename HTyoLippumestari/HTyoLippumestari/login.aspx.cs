@@ -20,10 +20,11 @@ namespace HTyoLippumestari
         {
             MysliCustomConnector connector = new MysliCustomConnector();
             connector.OpenConnection();
-            txtB1.Text = "Yhteys avattu";
+            
+            //txtB1.Text = "Yhteys avattu";
             if (connector.VerifyLogin(txtUser.Text, txtPasswd.Text))
             {
-                txtB2.Text = "ONNISTUI";
+                //txtB2.Text = "ONNISTUI";
                 connector.CloseConnection();
 
                 Response.Cookies["UserName"].Value = txtUser.Text;
@@ -33,10 +34,12 @@ namespace HTyoLippumestari
             }
             else
             {
-                txtB2.Text = "FAILED";
+                lblvalidlogin.Text = "Väärä käyttäjätunnus tai salasana";
+                //txtB2.Text = "FAILED";
                 //Server.Transfer("loginfailed.aspx");
                 connector.CloseConnection();
             }
+             
 
         }
     }

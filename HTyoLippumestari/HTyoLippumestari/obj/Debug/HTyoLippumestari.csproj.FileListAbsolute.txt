@@ -40,3 +40,9 @@ D:\G2681\HTyoLippumestari\HTyoLippumestari\HTyoLippumestari\bin\MySql.Data.dll
 D:\G2681\HTyoLippumestari\HTyoLippumestari\HTyoLippumestari\obj\Debug\HTyoLippumestari.csprojResolveAssemblyReference.cache
 D:\G2681\HTyoLippumestari\HTyoLippumestari\HTyoLippumestari\obj\Debug\HTyoLippumestari.dll
 D:\G2681\HTyoLippumestari\HTyoLippumestari\HTyoLippumestari\obj\Debug\HTyoLippumestari.pdb
+D:\G2559\AspnetHarjoitustyo\HTyoLippumestari\HTyoLippumestari\bin\HTyoLippumestari.dll
+D:\G2559\AspnetHarjoitustyo\HTyoLippumestari\HTyoLippumestari\bin\HTyoLippumestari.pdb
+D:\G2559\AspnetHarjoitustyo\HTyoLippumestari\HTyoLippumestari\bin\MySql.Data.dll
+D:\G2559\AspnetHarjoitustyo\HTyoLippumestari\HTyoLippumestari\obj\Debug\HTyoLippumestari.csprojResolveAssemblyReference.cache
+D:\G2559\AspnetHarjoitustyo\HTyoLippumestari\HTyoLippumestari\obj\Debug\HTyoLippumestari.dll
+D:\G2559\AspnetHarjoitustyo\HTyoLippumestari\HTyoLippumestari\obj\Debug\HTyoLippumestari.pdb

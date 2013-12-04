@@ -22,6 +22,15 @@ namespace HTyoLippumestari {
         protected global::System.Web.UI.WebControls.TextBox txtUser;
         
         /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        
+        /// <summary>
         /// txtPasswd control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace HTyoLippumestari {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPasswd;
+        
+        /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
         
         /// <summary>
         /// btnLogin control.
@@ -40,21 +58,12 @@ namespace HTyoLippumestari {
         protected global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
-        /// txtB1 control.
+        /// lblvalidlogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtB1;
-        
-        /// <summary>
-        /// txtB2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtB2;
+        protected global::System.Web.UI.WebControls.Label lblvalidlogin;
     }
 }

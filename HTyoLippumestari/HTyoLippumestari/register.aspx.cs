@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text.RegularExpressions;
 
 namespace HTyoLippumestari
 {
@@ -14,12 +15,17 @@ namespace HTyoLippumestari
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblRegister.Text = " * merkityt pakollisia";
+        }
 
+        protected void CheckBoxRequired_ServerValidate(object sender, ServerValidateEventArgs e)
+        {
+            e.IsValid = cbTos.Checked;
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtPsswd.Text == txtPasswd2.Text)
+            if (txtPsswd.Text == txtPasswd2.Text && cbTos.Checked)
             {
                 hashedpasswd = SimpleHash.ComputeHash(txtPsswd.Text, "SHA512", ConfigurationManager.AppSettings["salt"]);
 
@@ -27,17 +33,22 @@ namespace HTyoLippumestari
                 mysliconnector.OpenConnection();
                 if (mysliconnector.VerifyUserNotDuplicate(txtUser1.Text))
                 {
-                    if(mysliconnector.CreateUser(txtUser1.Text, hashedpasswd, txtFirstname.Text, txtLastname.Text, txtAddress.Text, txtPostal.Text, txtCity.Text, txtNro.Text, txtEmail.Text)){
-                    txtDebug.Text = "Onnistui!";
-                    mysliconnector.CloseConnection();
+                    if (mysliconnector.CreateUser(txtUser1.Text, hashedpasswd, txtFirstname.Text, txtLastname.Text, txtAddress.Text, txtPostal.Text, txtCity.Text, txtNro.Text, txtEmail.Text))
+                    {
+                        lblRegister.Text = "Rekisteröinti onnistui!";
+                        mysliconnector.CloseConnection();
                     }
-                    else txtDebug.Text = "FAILED TO CREATE";
+                    else lblRegister.Text = "Rekisteröinti epäonnistui";
                 }
-                else txtDebug.Text = "USER EXIST";
+                else lblRegister.Text = "Käyttäjätunnus löytyy jo";
 
-                
+
             }
-            else txtDebug.Text = "PASSWORD DOESENT MATCH VERIFIED PASSWORD";
+            else
+            {
+                lblRegister.Text = "Tarkasta, että kaikki tiedot ovat oikein";
+            }
+
         }
 
         protected static byte[] GetBytes(string str)
