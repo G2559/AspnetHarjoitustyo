@@ -257,7 +257,7 @@
         <br />
         <asp:Button ID="btnUpdate" runat="server" Text="Muuta tietoja" OnClick="btnUpdate_Click" />
         <asp:Button ID="btnReady" runat="server" Text="Valmis" OnClick="btnReady_Click" />
-        <asp:Button ID="btnCancel" runat="server" Text="Peruuta" OnClick="btnCancel_Click" />
+        <asp:Button ID="btnCancel" runat="server" Text="Peruuta" OnClick="btnCancel_Click" CausesValidation="false"/>
         <br />
         <br />
         <br />
